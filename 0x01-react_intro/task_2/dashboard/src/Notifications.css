@@ -2,3 +2,11 @@
   border: 60px;
   padding: 1px solid maroon;
 }
+
+ul li[data-priority="default"] {
+  color: blue;
+}
+
+ul li[data-priority="urgent"] {
+  color: red;
+}
