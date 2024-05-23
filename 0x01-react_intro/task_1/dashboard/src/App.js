@@ -1,6 +1,9 @@
 import "./App.css";
 import hlogo from "./logo.jpg";
+import { getFooterCopy, getFullYear } from "./utils.js";
 
+const year = getFullYear();
+const getFooter = getFooterCopy(false);
 function App() {
   return (
     <>
@@ -13,7 +16,11 @@ function App() {
         <p>Login to access the full dashboard</p>
       </div>
       <div className="linea"></div>
-      <footer className="App-footer"></footer>
+      <footer className="App-footer">
+        <p>
+          Copyright {year} - {getFooter}
+        </p>
+      </footer>
     </>
   );
 }
