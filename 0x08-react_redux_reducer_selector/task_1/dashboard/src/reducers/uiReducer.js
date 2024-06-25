@@ -7,6 +7,10 @@ import {
   LOGIN_FAILURE,
 } from "../actions/uiActionTypes";
 
+import immutable from "immutable";
+
+const { Map } = immutable;
+
 export const initialState = {
   isNotificationDrawerVisible: false,
   isUserLoggedIn: false,
@@ -14,6 +18,7 @@ export const initialState = {
 };
 
 export const uiReducer = (state = initialState, action) => {
+  state = Map(state);
   switch (action.type) {
     case DISPLAY_NOTIFICATION_DRAWER:
       return { ...state, isNotificationDrawerVisible: true };
